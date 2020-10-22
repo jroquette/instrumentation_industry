@@ -12,7 +12,7 @@ class Instrumentation(models.Model):
     equation = models.FloatField()
     installation_quota = models.FloatField()
     attention_value = models.FloatField()
-    id_ind = models.ForeignKey(Industry, null=True,
+    id_ind = models.ForeignKey(Industry, null=True, related_name='instrumentation',
                                on_delete=models.CASCADE)
 
     def __str__(self):
