@@ -14,3 +14,4 @@ class InstrumentationSerializer(serializers.ModelSerializer):
         """Meta Class"""
         model = Instrumentation
         fields = '__all__'
+        extra_kwargs = {'instrumentation': {'write_only': True}}
