@@ -8,9 +8,10 @@ from client.serializers import ClientSerializer
 
 class IndustrySerializer(serializers.ModelSerializer):
     """Serializer Class of Industry"""
-    client = ClientSerializer()
+    client = ClientSerializer(read_only=True)
 
     class Meta:
         """Meta Class"""
         model = Industry
-        exclude = ['id_cli']
+        fields = ['name', 'longitude', 'latitude', 'id_cli', 'client']
+        extra_kwargs = {'id_cli': {'write_only': True}}
