@@ -1,3 +1,5 @@
+"""Urls of Client"""
+
 from rest_framework import routers
 
 from client.views import ClientViewSet

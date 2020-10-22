@@ -1,3 +1,5 @@
+"""Urls of Industry"""
+
 from rest_framework import routers
 
 from industry.views import IndustryViewSet

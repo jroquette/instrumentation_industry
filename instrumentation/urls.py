@@ -1,3 +1,5 @@
+"""Urls of Instrumentation"""
+
 from rest_framework import routers
 
 from instrumentation.views import InstrumentationViewSet
