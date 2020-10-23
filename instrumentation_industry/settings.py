@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'instrumentation_industry.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangodb',
+        'NAME': 'instrumentationdb',
         'USER': 'django',
         'PASSWORD': 'django123',
         'HOST': '127.0.0.1',

@@ -7,11 +7,9 @@ from instrumentation.models import Instrumentation
 
 class InstrumentationSerializer(serializers.ModelSerializer):
     """Serializer Class of Instrumentation"""
-    instrumentation_type = serializers.ReadOnlyField()
     industry = serializers.ReadOnlyField()
 
     class Meta:
         """Meta Class"""
         model = Instrumentation
         fields = '__all__'
-        extra_kwargs = {'instrumentation': {'write_only': True}}
