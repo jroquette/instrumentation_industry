@@ -29,5 +29,5 @@ urlpatterns = [
     path('industry/', include(industry_urls)),
     path('instrumentation/', include(instrumentation_urls)),
     path('admin/', admin.site.urls),
-    path('login/', obtain_auth_token, name='login')
+    path('get_token/', obtain_auth_token, name='login'),
 ]
