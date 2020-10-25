@@ -9,4 +9,4 @@ class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta Class"""
         model = Account
-        exclude = ['password']
+        fields = '__all__'
