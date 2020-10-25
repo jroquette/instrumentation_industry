@@ -15,15 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken.views import obtain_auth_token
 
 from client.urls import client_urls
 from industry.urls import industry_urls
 from instrumentation.urls import instrumentation_urls
+from account.views import registration_view
 
 
 urlpatterns = [
     path('client/', include(client_urls)),
+    path('register_token/', registration_view),
     path('industry/', include(industry_urls)),
     path('instrumentation/', include(instrumentation_urls)),
     path('admin/', admin.site.urls),
+    path('login/', obtain_auth_token, name='login')
 ]
